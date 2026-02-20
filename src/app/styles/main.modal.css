@@ -1,0 +1,211 @@
+
+.main-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-top: 65px;
+  overflow: hidden;
+}
+
+
+.section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1s ease, transform 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.section.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.section.inactive {
+  opacity: 0;
+  z-index: 1;
+}
+
+
+.section-number {
+  font-size: 15rem; 
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 1s ease;
+}
+
+.section.active .section-number {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+.section.inactive .section-number {
+  opacity: 1;
+  transform: translateY(-50%) scale(0.8);
+}
+
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  max-width: 1200px;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+
+.text-content {
+  flex: 1 1 50%;
+  padding: 2rem;
+  position: relative;
+  right: 30%;
+  border-radius: 10px;
+  color: white;
+  text-align: left;
+  animation: fadeSlideIn 1s ease forwards;
+  height: 400px;
+}
+
+.text-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.buttons button {
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #5ea349;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+  margin-left: 10px;
+}
+
+
+.form-content {
+  position: absolute;           
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 400px;                 
+  background: rgba(55, 86, 110, 0.8); 
+  border-radius: 10px;
+  padding: 20px 15px;         
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.form-content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.form-content input,
+.form-content select,
+.form-content button {
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.form-content button {
+  background-color: #5ea349;
+  color: white;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 50px;   
+  transition: transform 0.3s;
+}
+
+.form-content button:hover {
+  transform: scale(1.05);
+}
+
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateX(-50px);}
+  to { opacity: 1; transform: translateX(0);}
+}
+
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .text-content,
+  .form-content {
+    flex: 1 1 100%;
+    position: relative;
+    right: 0;
+    left: 0;
+    transform: none;
+    top: auto;
+    margin: 1rem auto;
+    height: auto;
+  }
+
+  .section-number {
+    font-size: 6rem;
+    left: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+  }
+
+  .buttons button {
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0.25rem;
+  }
+
+  .form-content {
+    width: 90%;      
+    padding: 15px 10px;
+  }
+
+  .section-number {
+    font-size: 8rem;
+    left: 5%;
+  }
+}
