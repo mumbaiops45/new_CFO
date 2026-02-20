@@ -1,0 +1,169 @@
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.hero-wrapper{
+  background: linear-gradient(135deg,#f8fbff,#eef4ff);
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.hero-bg-shape{
+  position:absolute;
+  right:-200px;
+  top:-200px;
+  width:500px;
+  height:500px;
+  background: linear-gradient(135deg,#4f46e5,#06b6d4);
+  border-radius:50%;
+  opacity:.08;
+}
+
+
+/* badge */
+
+.hero-badge{
+  background:#e0e7ff;
+  color:#4f46e5;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:14px;
+  font-weight:600;
+}
+
+
+/* title */
+
+.hero-title{
+  font-size:48px;
+  font-weight:700;
+  color:#0f172a;
+  margin-top:15px;
+  margin-bottom:20px;
+  line-height:1.2;
+}
+
+.hero-highlight{
+  color:#4f46e5;
+}
+
+
+/* description */
+
+.hero-desc{
+  font-size:17px;
+  color:#475569;
+  margin-bottom:30px;
+  line-height:1.7;
+}
+
+
+/* cards */
+
+.hero-card-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+
+.hero-card{
+
+  background:white;
+  padding:18px;
+  border-radius:14px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+
+  box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+  transition:.3s;
+}
+
+
+.hero-card:hover{
+
+  transform:translateY(-6px);
+
+  box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+
+.card-icon{
+
+  font-size:26px;
+}
+
+
+/* IMAGE */
+
+.hero-image-box{
+
+  position:relative;
+
+  display:inline-block;
+}
+
+
+.hero-image{
+
+  width:450px;
+
+  border-radius:16px;
+
+  box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+
+
+/* floating card */
+
+.floating-card{
+
+  position:absolute;
+
+  bottom:-20px;
+
+  left:-30px;
+
+  background:white;
+
+  padding:14px 20px;
+
+  border-radius:12px;
+
+  font-weight:600;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+
+/* responsive */
+
+@media(max-width:991px){
+
+.hero-title{
+font-size:36px;
+}
+
+.hero-card-grid{
+grid-template-columns:1fr;
+}
+
+.hero-image{
+width:100%;
+}
+
+}
