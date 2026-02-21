@@ -34,7 +34,7 @@ export default function Highlight() {
 
     const [active, setActive] = useState(0);
 
-   
+
     useEffect(() => {
         const interval = setInterval(() => {
             setActive((prev) => (prev + 1) % services.length);
@@ -75,14 +75,14 @@ export default function Highlight() {
                                 onClick={() => setActive(index)}
                             >
 
-                                <div className="cfo-premium-service-number">
+                                {/* <div className="cfo-premium-service-number">
                                     {service.id}
-                                </div>
+                                </div> */}
 
                                 <div>
-                                    <div className="cfo-premium-service-name">
+                                    {/* <div className="cfo-premium-service-name">
                                         {service.name}
-                                    </div>
+                                    </div> */}
 
                                     <div className="cfo-premium-service-title-small">
                                         {service.title}
@@ -91,6 +91,32 @@ export default function Highlight() {
 
                             </div>
                         ))}
+
+                         <div className="cfo-premium-preview-content">
+                        <span className="cfo-premium-preview-badge">
+                            Radiant Company Services
+                        </span>
+
+                        <h3>
+                            {services[active].title}
+                        </h3>
+
+                        <p>
+                            {services[active].desc}
+                        </p>
+
+                        <div className="cfo-premium-preview-buttons">
+
+                            <button className="cfo-premium-btn-primary">
+                                Get a Quote →
+                            </button>
+
+                            <button className="cfo-premium-btn-secondary">
+                                View Services
+                            </button>
+
+                        </div>
+                    </div>
 
                     </div>
 
@@ -105,41 +131,10 @@ export default function Highlight() {
                                     src={services[active].image}
                                     className="cfo-premium-preview-image"
                                 />
-
                             </div>
-
-                            <div className="cfo-premium-preview-content">
-
-                                <span className="cfo-premium-preview-badge">
-                                    Radiant Company Services
-                                </span>
-
-                                <h3>
-                                    {services[active].title}
-                                </h3>
-
-                                <p>
-                                    {services[active].desc}
-                                </p>
-
-                                <div className="cfo-premium-preview-buttons">
-
-                                    <button className="cfo-premium-btn-primary">
-                                        Get a Quote →
-                                    </button>
-
-                                    <button className="cfo-premium-btn-secondary">
-                                        View Services
-                                    </button>
-
-                                </div>
-
-                            </div>
-
                         </div>
 
                     </div>
-
                 </div>
 
             </div>

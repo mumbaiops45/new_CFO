@@ -1,332 +1,206 @@
 
-.cfo-premium-services-section{
 
-padding:50px 20px;
+.cfo-premium-services-section {
+    padding: 50px 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #F4F8FF 100%);
+    position: relative;
+    overflow: hidden;
+}
 
-background:
-linear-gradient(180deg,#ffffff 0%,#F4F8FF 100%);
+.cfo-premium-services-section::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(58, 180, 21, 0.15), transparent);
+    top: -200px;
+    right: -200px;
+    border-radius: 50%;
+}
 
-position:relative;
+.cfo-premium-services-container {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
 
-overflow:hidden;
+.cfo-premium-services-header {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeUp 1s ease;
+}
 
+.cfo-premium-services-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cfo-premium-services-subtitle {
+    color: #64748b;
+    font-size: 16px;
+}
+
+.cfo-premium-services-badge {
+    background: white;
+    color: #3ab415;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.cfo-premium-services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.cfo-premium-services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* position: relative;
+    left: 40px; */
+}
+
+.cfo-premium-service-item {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    background: white;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.cfo-premium-service-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.cfo-premium-service-item.active {
+    background: linear-gradient(135deg, #3ab415, #6be63a);
+    color: white;
+}
+
+.cfo-premium-service-number {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.cfo-premium-service-name {
+    font-weight: 600;
+}
+
+.cfo-premium-service-title-small {
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 
-.cfo-premium-services-section::before{
+.cfo-premium-service-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-content:"";
+.cfo-premium-preview-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1);
+    animation: fadeUp 1s ease;
+    transition: 0.4s;
+}
 
-position:absolute;
+.cfo-premium-preview-card:hover {
+    transform: translateY(-10px);
+}
 
-width:600px;
-height:600px;
+.cfo-premium-preview-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
 
-background:radial-gradient(circle,rgba(58,180,21,0.15),transparent);
+.cfo-premium-preview-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.4s;
+}
 
-top:-200px;
-right:-200px;
+.cfo-premium-preview-card:hover .cfo-premium-preview-image {
+    transform: scale(1.1);
+}
 
-border-radius:50%;
+.cfo-premium-preview-content {
+    padding: 20px;
+}
 
+.cfo-premium-preview-content h3 {
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+.cfo-premium-preview-content p {
+    color: #64748b;
+}
+
+.cfo-premium-preview-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cfo-premium-btn-primary {
+    background: #3ab415;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cfo-premium-btn-secondary {
+    border: 1px solid #3ab415;
+    background: white;
+    color: #3ab415;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 
-
-.cfo-premium-services-container{
-
-max-width:1200px;
-
-margin:auto;
-
-position:relative;
-
-z-index:2;
-
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
-
-.cfo-premium-services-header{
-
-text-align:center;
-
-margin-bottom:70px;
-
-animation:fadeUp 1s ease;
-
+@media (max-width: 992px) {
+    .cfo-premium-services-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
-
-.cfo-premium-services-badge{
-
-background:white;
-
-color:#3ab415;
-
-padding:8px 18px;
-
-border-radius:50px;
-
-font-weight:600;
-
-box-shadow:0 4px 20px rgba(0,0,0,0.05);
-
-display:inline-block;
-
-margin-bottom:15px;
-
-}
-
-.cfo-premium-services-title{
-
-font-size:42px;
-
-font-weight:700;
-
-margin-bottom:15px;
-
-}
-
-.cfo-premium-services-subtitle{
-
-color:#64748b;
-
-}
-
-
-
-.cfo-premium-services-grid{
-
-display:grid;
-
-grid-template-columns:1fr 1.3fr;
-
-gap:60px;
-
-align-items:center;
-
-}
-
-@media(max-width:992px){
-
-.cfo-premium-services-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-
-.cfo-premium-service-item{
-
-display:flex;
-
-gap:20px;
-
-padding:20px;
-
-background:white;
-
-border-radius:14px;
-
-margin-bottom:15px;
-
-cursor:pointer;
-
-transition:.4s;
-
-border:1px solid rgba(0,0,0,0.05);
-
-}
-
-.cfo-premium-service-item:hover{
-
-transform:translateX(10px);
-
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
-}
-
-.cfo-premium-service-item.active{
-
-background:linear-gradient(135deg,#3ab415,#6be63a);
-
-color:white;
-
-}
-
-.cfo-premium-service-number{
-
-font-size:22px;
-
-font-weight:700;
-
-}
-
-.cfo-premium-service-title-small{
-
-font-size:14px;
-
-opacity:.8;
-
-}
-
-
-
-.cfo-premium-preview-card{
-
-background:white;
-
-border-radius:20px;
-
-overflow:hidden;
-
-box-shadow:0 30px 80px rgba(0,0,0,0.1);
-
-animation:fadeUp 1s ease;
-
-transition:.4s;
-
-}
-
-.cfo-premium-preview-card:hover{
-
-transform:translateY(-10px);
-
-}
-
-
-
-.cfo-premium-preview-image-wrapper{
-
-height:260px;
-
-overflow:hidden;
-
-}
-
-.cfo-premium-preview-image{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-transition:.6s;
-
-}
-
-.cfo-premium-preview-card:hover .cfo-premium-preview-image{
-
-transform:scale(1.1);
-
-}
-
-
-.cfo-premium-preview-content{
-
-padding:35px;
-
-}
-
-.cfo-premium-preview-badge{
-
-color:#3ab415;
-
-font-weight:600;
-
-}
-
-.cfo-premium-preview-content h3{
-
-font-size:26px;
-
-margin:10px 0;
-
-}
-
-.cfo-premium-preview-content p{
-
-color:#64748b;
-
-}
-
-
-
-.cfo-premium-preview-buttons{
-
-margin-top:20px;
-
-display:flex;
-
-gap:15px;
-
-}
-
-.cfo-premium-btn-primary{
-
-background:#3ab415;
-
-color:white;
-
-border:none;
-
-padding:12px 22px;
-
-border-radius:10px;
-
-cursor:pointer;
-
-font-weight:600;
-
-}
-
-.cfo-premium-btn-secondary{
-
-border:1px solid #3ab415;
-
-background:white;
-
-color:#3ab415;
-
-padding:12px 22px;
-
-border-radius:10px;
-
-cursor:pointer;
-
-}
-
-
-@keyframes fadeUp{
-
-from{
-
-opacity:0;
-transform:translateY(40px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-
-/* ============================= */
-/* RESPONSIVE IMPROVEMENTS */
-/* ============================= */
 
 @media (max-width: 768px) {
-
     .cfo-premium-services-section {
-        padding: 80px 20px;
+        padding: 60px 20px;
     }
 
     .cfo-premium-services-title {
@@ -337,21 +211,8 @@ transform:translateY(0);
         font-size: 14px;
     }
 
-    .cfo-premium-services-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .cfo-premium-service-item {
-        padding: 15px;
-    }
-
     .cfo-premium-preview-image-wrapper {
-        height: 200px;
-    }
-
-    .cfo-premium-preview-content {
-        padding: 25px;
+        height: auto;
     }
 
     .cfo-premium-preview-content h3 {
@@ -360,6 +221,7 @@ transform:translateY(0);
 
     .cfo-premium-preview-buttons {
         flex-direction: column;
+        gap: 10px;
     }
 
     .cfo-premium-btn-primary,

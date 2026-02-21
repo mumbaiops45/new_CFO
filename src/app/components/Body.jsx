@@ -1,6 +1,4 @@
 
-
-
 'use client';
 import React from 'react';
 import "../styles/body.modal.css";
@@ -9,20 +7,18 @@ const Body = () => {
   return (
     <section className="hero-wrapper">
 
-      {/* background shape */}
       <div className="hero-bg-shape"></div>
 
       <div className="container hero-container">
         <div className="row align-items-center">
 
-          {/* LEFT CONTENT */}
+          
           <div className="col-lg-6">
 
             <h1 className="hero-title1">
               Strategic Financial Leadership
-              <span className="hero-highlight"> for Growing Businesses</span>
+              <span className="hero-highlight"> for Growing Businesses </span>
             </h1>
-
             <p className="hero-desc">
               Radiant Services Company provides expert Virtual CFO, tax,
               compliance, and strategic advisory services. We help companies
@@ -30,7 +26,6 @@ const Body = () => {
               confidence.
             </p>
 
-            {/* premium cards */}
             <div className="hero-card-grid">
 
               <div className="hero-card">
@@ -69,7 +64,7 @@ const Body = () => {
 
           </div>
 
-          {/* RIGHT IMAGE */}
+          
           <div className="col-lg-6 text-center">
 
             <div className="hero-image-box">

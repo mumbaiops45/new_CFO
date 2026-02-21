@@ -36,27 +36,16 @@ export default function Workprocess() {
 
   return (
     <section className="cfo-workflow-section">
-
       <div className="cfo-workflow-container">
-
-        {/* heading */}
         <div className="cfo-workflow-header">
-
-          {/* <span className="cfo-workflow-badge">
-            OUR WORK PROCESS
-          </span> */}
-
           <h2 className="cfo-workflow-title">
             Strategic Financial Leadership for Growing Businesses
           </h2>
-
           <p className="cfo-workflow-subtitle">
             Our proven CFO process ensures transparency, efficiency, and measurable financial growth.
           </p>
 
         </div>
-
-        {/* steps */}
         <div className="cfo-workflow-grid">
 
           {steps.map((step, index) => (
@@ -80,11 +69,9 @@ export default function Workprocess() {
 
             </div>
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }
+

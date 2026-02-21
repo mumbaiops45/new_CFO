@@ -25,20 +25,6 @@ const blogs = [
     date: "28 Jan 2026",
     image: "/strat.jpeg",
   },
-//   {
-//     id: 3,
-//     title: "Financial Planning Mistakes to Avoid in 2026",
-//     category: "Business Growth",
-//     date: "28 Jan 2026",
-//     image: "/strat.jpeg",
-//   },
-//   {
-//     id: 3,
-//     title: "Financial Planning Mistakes to Avoid in 2026",
-//     category: "Business Growth",
-//     date: "28 Jan 2026",
-//     image: "/strat.jpeg",
-//   },
 ];
 
 const RecentBlog = () => {
