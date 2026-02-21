@@ -50,52 +50,58 @@ const Main = () => {
   }, []);
 
   return (
-  <div className="main-container">
-  {sections.map((section, index) => (
-    <div
-      key={section.id}
-      className={`section ${index === currentSection ? "active" : "inactive"}`}
-      style={{ backgroundImage: `url(${section.img})` }}
-    >
-      <div className="content-wrapper">
-        <div className="text-content">
-          <div className="section-number">{section.number}</div>
-          <h1>{section.title}</h1>
-          <p>{section.desc}</p>
-          <div className="buttons">
-            {section.buttons.map((btn, i) => (
-              <button key={i} className={btn.type}>
-                {btn.text}
-              </button>
-            ))}
+    <div className="main-container">
+     
+      {sections.map((section, index) => (
+        <div
+          key={section.id}
+          className={`section ${index === currentSection ? "active" : "inactive"}`}
+          style={{ backgroundImage: `url(${section.img})` }}
+        >
+          <div className="content-wrapper">
+            <div className="text-content">
+              <div className="section-number">{section.number}</div>
+              <h1>{section.title}</h1>
+              <p>{section.desc}</p>
+              <div className="buttons">
+                {section.buttons.map((btn, i) => (
+                  <button key={i} className={btn.type}>
+                    {btn.text}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
+      ))}
+      <div className="form-content">
+        <h4>Request a Consultation</h4>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" />
 
-        <div className="form-content">
-          <h4>Request a Consultation</h4>
-          <label htmlFor="name">Full Name</label>
-          <input type="text" placeholder="Enter your name" />
-          <label htmlFor="phone">Phone Number</label>
-          <input type="text" placeholder="Enter phone number" />
-          <label htmlFor="email">Email</label>
-          <input type="text" placeholder="Enter email" />
-          <label htmlFor="service">Service Needed</label>
-          <select name="service" id="service">
-            <option value="Income Tax">Income Tax</option>
-            <option value="GST Filing">GST Filing</option>
-            <option value="Legal Drafting">Legal Drafting</option>
-            <option value="Statutory Compliance">Statutory Compliance</option>
-            <option value="Virtual CFO">Virtual CFO</option>
-            <option value="Business Consulting">Business Consulting</option>
-          </select>
-           <label htmlFor="email">Message</label>
-          <input type="text" placeholder="Enter Sort Message"  />
-          <button>Submit Request</button>
-        </div>
+        <label>Phone Number</label>
+        <input type="text" placeholder="Enter phone number" />
+
+        <label>Email</label>
+        <input type="text" placeholder="Enter email" />
+
+        <label>Service Needed</label>
+        <select>
+          <option>Income Tax</option>
+          <option>GST Filing</option>
+          <option>Legal Drafting</option>
+          <option>Statutory Compliance</option>
+          <option>Virtual CFO</option>
+          <option>Business Consulting</option>
+        </select>
+
+        <label>Message</label>
+        <input type="text" placeholder="Enter Short Message" />
+
+        <button>Submit Request</button>
       </div>
+
     </div>
-  ))}
-</div>
   );
 };
 
