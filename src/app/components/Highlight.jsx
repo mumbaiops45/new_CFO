@@ -12,7 +12,7 @@ const services = [
         name: "Virtual CFO",
         title: "Virtual CFO Support",
         desc: "Strategic financial leadership, reporting, forecasting, and growth planning for modern businesses.",
-        image: "/banner.jpeg"
+        image: "/partner1.jpg"
     },
     {
         id: "02",
