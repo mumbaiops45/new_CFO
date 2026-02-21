@@ -14,16 +14,27 @@ import Cclients from "./components/Cclients";
 export default function Home() {
   return (
     <div>
-      <Main/>
-      <Cclients/>
-      <Feature/>
-      <Body/>
-      <Workprocess/>
-      <Highlight/>
-       <CaseStudies/>
-       <ClientFeedback/>
-      <Faq/>
-      <RecentBlog/>
+      <section id="main">
+        <Main />
+      </section>
+
+      <Cclients />
+      <Feature />
+      <Body />
+      <Workprocess />
+      <Highlight />
+      <CaseStudies />
+      <section id="voice">
+        <ClientFeedback />
+      </section>
+      <section id="task">
+        <Faq />
+      </section>
+
+      <section id="event">
+        <RecentBlog />
+      </section>
+
     </div>
 
   );

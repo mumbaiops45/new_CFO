@@ -103,7 +103,7 @@
 @media(max-width:600px){ .voice-carousel { gap:10px; } .voice-title { font-size:28px; } }
 
 
-/* Pause animation when hovering anywhere on carousel */
+
 .voice-carousel-wrapper:hover .voice-carousel-track {
   animation-play-state: paused;
 }
