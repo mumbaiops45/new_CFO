@@ -41,6 +41,14 @@ const sections = [
 
 const Main = () => {
   const [currentSection, setCurrentSection] = useState(0);
+  const [formd, setformd] = useState({
+    name: "",
+    email: "",
+    mobileNo: "",
+    service: "",
+    message: ""
+  });
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -49,9 +57,23 @@ const Main = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setformd((prev) => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log("Submitted data ", formd)
+  }
+
   return (
     <div className="main-container">
-     
+
       {sections.map((section, index) => (
         <div
           key={section.id}
@@ -74,33 +96,70 @@ const Main = () => {
           </div>
         </div>
       ))}
-      <div className="form-content">
-        <h4>Request a Consultation</h4>
-        <label>Full Name</label>
-        <input type="text" placeholder="Enter your name" />
 
-        <label>Phone Number</label>
-        <input type="text" placeholder="Enter phone number" />
 
-        <label>Email</label>
-        <input type="text" placeholder="Enter email" />
+      <form onSubmit={handleSubmit}>
+        <div className="form-content">
+          <h4>Request a Consultation</h4>
 
-        <label>Service Needed</label>
-        <select>
-          <option>Income Tax</option>
-          <option>GST Filing</option>
-          <option>Legal Drafting</option>
-          <option>Statutory Compliance</option>
-          <option>Virtual CFO</option>
-          <option>Business Consulting</option>
-        </select>
+          <label>Full Name</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            onChange={handleChange}
+            value={formd.name}
+            required
+          />
 
-        <label>Message</label>
-        <input type="text" placeholder="Enter Short Message" />
+          <label>Phone Number</label>
+          <input
+            type="tel"
+            name="mobileNo"
+            placeholder="Enter phone number"
+            onChange={handleChange}
+            value={formd.mobileNo}
+            required
+          />
 
-        <button>Submit Request</button>
-      </div>
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter email"
+            onChange={handleChange}
+            value={formd.email}
+            required
+          />
 
+          <label>Service Needed</label>
+          <select
+            name="service"
+            value={formd.service}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select Service</option>
+            <option value="Income Tax">Income Tax</option>
+            <option value="GST Filing">GST Filing</option>
+            <option value="Legal Drafting">Legal Drafting</option>
+            <option value="Statutory Compliance">Statutory Compliance</option>
+            <option value="Virtual CFO">Virtual CFO</option>
+            <option value="Business Consulting">Business Consulting</option>
+          </select>
+
+          <label>Message</label>
+          <input
+            type="text"
+            name="message"
+            placeholder="Enter Short Message"
+            onChange={handleChange}
+            value={formd.message}
+          />
+
+          <button type="submit">Submit Request</button>
+        </div>
+      </form>
     </div>
   );
 };

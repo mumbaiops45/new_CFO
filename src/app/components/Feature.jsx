@@ -18,7 +18,7 @@ const Feature = () => {
     {
       name: "Shivam Singh",
       role: "Startup Founder",
-      text: "Their team made compliance stress-free. From GST to legal drafting, everything was fast and professional.",
+      text: "Their team made compliance stress-free. From GST to legal drafting, everything was fast",
       extraText: "The dashboard they provided helped track finances easily and avoid mistakes.",
       image: "https://www.shutterstock.com/image-photo/happy-young-professional-latin-business-260nw-2438190417.jpg",
       rating: 4,
