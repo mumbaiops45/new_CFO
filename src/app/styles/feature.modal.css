@@ -11,7 +11,7 @@
 .voice-carousel-track {
   display: flex;
   gap: 25px;
-  animation: scrollCarousel 30s linear infinite;
+  animation: scrollCarousel 18s linear infinite;
 }
 
 @keyframes scrollCarousel {
