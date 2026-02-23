@@ -1,12 +1,4 @@
 
-
-
-/* ===============================
-CFO CASE STUDIES PREMIUM SECTION
-Unique class prefix: cfo-cs-
-No override conflicts
-================================ */
-
 .cfo-cs-section{
   padding:120px 20px;
   background:#F4F8FF;
@@ -14,7 +6,7 @@ No override conflicts
   overflow:hidden;
 }
 
-/* soft background glow */
+
 .cfo-cs-section::before{
   content:"";
   position:absolute;
@@ -37,7 +29,7 @@ No override conflicts
   filter:blur(120px);
 }
 
-/* container */
+
 .cfo-cs-container{
   max-width:1200px;
   margin:auto;

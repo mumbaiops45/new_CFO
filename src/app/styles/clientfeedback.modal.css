@@ -2,7 +2,7 @@
 
 
 .cfo-testimonial-section {
-  padding: 50px 20px;
+  padding: 20px 20px;
   background: #EDF2FC;
 }
 
@@ -30,13 +30,15 @@
 }
 
 .cfo-testimonial-header h2 {
-  font-size: 40px;
+  font-size: 1.7rem;
   margin-bottom: 15px;
   color: #0f172a;
+  font-weight: 600;
 }
 
 .cfo-testimonial-header p {
   color: #64748b;
+  font-size: 14px;
 }
 
 
@@ -61,7 +63,8 @@
 
 
 .cfo-testimonial-card:hover {
-  background: linear-gradient(135deg, #3ab415, #6be63a);
+  /* background: linear-gradient(135deg, #3ab415, #6be63a); */
+  background: #53BC48;
   color: white;
   transform: translateY(-12px);
   box-shadow: 0 25px 70px rgba(0,0,0,0.15);
@@ -82,10 +85,12 @@
 
 
 .cfo-testimonial-text {
-  color: #334155;
-  line-height: 1.7;
-  margin-bottom: 30px;
-  transition: .3s;
+    color: #334155;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-family: 'Poppins';
+    font-size: 14px;
+    transition: all .3s;
 }
 
 
@@ -110,6 +115,7 @@
 .cfo-client-info h4 {
   margin: 0;
   color: #0f172a;
+      font-size: 16px;
 }
 
 .cfo-client-info span {

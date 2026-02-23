@@ -1,4 +1,6 @@
 
+
+
 .custom-navbar {
   background-color: #0B1F3A;
   padding: 0.5rem 1rem;
@@ -14,7 +16,8 @@
 }
 
 .custom-navbar .navbar-brand {
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
+  font-size: 14px;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -24,14 +27,14 @@
 
 .custom-navbar .navbar-nav .nav-link {
   padding: 0.5rem 0.75rem;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 .custom-navbar .btn.call-btn {
   background-color: #53bc48;
   border: none;
   white-space: nowrap;
-  font-size: 0.9rem;
+  font-size: 14px;
   padding: 0.35rem 0.8rem;
   margin-left: 1rem;
 }
@@ -47,6 +50,9 @@
 }
 
 
+
+
+
 @media (max-width: 992px) {
   .custom-navbar .navbar-nav {
     text-align: center;
@@ -55,7 +61,7 @@
     margin: 0.25rem 0;
   }
   .custom-navbar .navbar-brand {
-    font-size: 1rem;
+    font-size: 14px;
   }
   .custom-navbar .btn.call-btn {
     width: 100%;
@@ -70,11 +76,11 @@
     height: 35px;
   }
   .custom-navbar .navbar-nav .nav-link {
-    font-size: 0.95rem;
+    font-size: 14px;
     padding: 0.4rem 0.5rem;
   }
   .custom-navbar .btn.call-btn {
-    font-size: 0.85rem;
+    font-size: 14px;
     padding: 0.35rem 0.6rem;
   }
 }
@@ -82,7 +88,7 @@
 
 @media (max-width: 480px) {
   .custom-navbar .navbar-brand {
-    font-size: 0.95rem;
+    font-size: 14px;
     gap: 0.3rem;
   }
   .custom-navbar .navbar-brand img {
@@ -90,11 +96,11 @@
     height: 30px;
   }
   .custom-navbar .navbar-nav .nav-link {
-    font-size: 0.85rem;
+    font-size: 14px;
     padding: 0.3rem 0.4rem;
   }
   .custom-navbar .btn.call-btn {
-    font-size: 0.8rem;
+    font-size: 14px;
     padding: 0.25rem 0.5rem;
   }
 }

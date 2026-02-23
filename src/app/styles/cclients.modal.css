@@ -147,7 +147,7 @@
 }
 
 .stat-card h2 {
-  font-size: 26px;
+  font-size: 20px;
   color: #1d4ed8;
   margin-bottom: 8px;
   position: relative;
@@ -155,7 +155,7 @@
 }
 
 .stat-card p {
-  font-size: 1.05rem;
+  font-size: 14px;
   color: #475569;
   position: relative;
   z-index: 2;

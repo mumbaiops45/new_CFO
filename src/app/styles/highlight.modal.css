@@ -32,14 +32,14 @@
 }
 
 .cfo-premium-services-title {
-    font-size: 42px;
-    font-weight: 700;
+    font-size: 1.7rem;
+    font-weight: 600;
     margin-bottom: 15px;
 }
 
 .cfo-premium-services-subtitle {
     color: #64748b;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .cfo-premium-services-badge {
@@ -64,8 +64,6 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    /* position: relative;
-    left: 40px; */
 }
 
 .cfo-premium-service-item {
@@ -150,11 +148,13 @@
 
 .cfo-premium-preview-content p {
     color: #64748b;
+    font-size: 14px;
 }
 
 .cfo-premium-preview-buttons {
     margin-top: 20px;
     display: flex;
+    font-size: 14px;
     gap: 15px;
     flex-wrap: wrap;
 }

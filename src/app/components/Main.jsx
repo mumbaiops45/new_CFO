@@ -106,6 +106,7 @@ const Main = () => {
           <input
             type="text"
             name="name"
+            className="tsts"
             placeholder="Enter your name"
             onChange={handleChange}
             value={formd.name}
@@ -116,6 +117,7 @@ const Main = () => {
           <input
             type="tel"
             name="mobileNo"
+            className="tsts"
             placeholder="Enter phone number"
             onChange={handleChange}
             value={formd.mobileNo}
@@ -126,6 +128,7 @@ const Main = () => {
           <input
             type="email"
             name="email"
+            className="tsts"
             placeholder="Enter email"
             onChange={handleChange}
             value={formd.email}
@@ -135,6 +138,7 @@ const Main = () => {
           <label>Service Needed</label>
           <select
             name="service"
+            className="tsts"
             value={formd.service}
             onChange={handleChange}
             required
@@ -152,6 +156,7 @@ const Main = () => {
           <input
             type="text"
             name="message"
+            className="tsts"
             placeholder="Enter Short Message"
             onChange={handleChange}
             value={formd.message}

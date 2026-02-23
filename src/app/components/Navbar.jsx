@@ -7,11 +7,11 @@ import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 
 const MyNavbar = () => {
-  const pathname = usePathname(); 
+  const pathname = usePathname();
   const router = useRouter();
 
   const scrollToSection = (id) => {
-    if (typeof window === 'undefined') return; 
+    if (typeof window === 'undefined') return;
     const element = document.getElementById(id);
     if (element) {
       const yOffset = -80;
@@ -23,10 +23,10 @@ const MyNavbar = () => {
   const handleScrollLink = (id) => (e) => {
     e.preventDefault();
     if (pathname === "/") {
-      scrollToSection(id); 
+      scrollToSection(id);
     } else {
-      router.push("/"); 
-      setTimeout(() => scrollToSection(id), 150); 
+      router.push("/");
+      setTimeout(() => scrollToSection(id), 150);
     }
   };
 
@@ -36,11 +36,11 @@ const MyNavbar = () => {
     <Navbar collapseOnSelect expand="lg" fixed="top" className="custom-navbar">
       <Container>
         <Navbar.Brand onClick={handleHomeClick}>
-          <Image 
-            src="/logo.jpg" 
-            alt="Logo" 
-            width={40} 
-            height={40} 
+          <Image
+            src="/logo.jpg"
+            alt="Logo"
+            width={40}
+            height={40}
             className="rounded-circle"
             priority
           />
@@ -49,9 +49,8 @@ const MyNavbar = () => {
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto align-items-lg-center">
-            <Nav.Link onClick={handleHomeClick}>Home</Nav.Link>
-            {/* <Nav.Link href="/about">About</Nav.Link> */}
+          <Nav className="ms-auto  align-items-lg-center">
+            <Nav.Link onClick={handleHomeClick} >Home</Nav.Link>
             <Nav.Link onClick={handleScrollLink("voice")}>Voice of Customer</Nav.Link>
             <Nav.Link onClick={handleScrollLink("event")}>Recent Updates</Nav.Link>
             <Nav.Link onClick={handleScrollLink("task")}>FAQ</Nav.Link>

@@ -12,7 +12,9 @@ body{
   overflow: hidden;
 }
 
-
+.hero-title1{
+  font-size: 1.7rem;
+}
 
 .hero-bg-shape{
   position:absolute;
@@ -57,14 +59,14 @@ body{
 /* description */
 
 .hero-desc{
-  font-size:17px;
+ font-size: 14px;
   color:#475569;
   margin-bottom:30px;
   line-height:1.7;
 }
 
 
-/* cards */
+
 
 .hero-card-grid{
   display:grid;
@@ -74,7 +76,7 @@ body{
 
 
 .hero-card{
-
+font-size: 14px;
   background:white;
   padding:18px;
   border-radius:14px;

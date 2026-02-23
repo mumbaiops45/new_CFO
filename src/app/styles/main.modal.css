@@ -85,17 +85,18 @@
 }
 
 .text-content h1 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 
 .text-content p {
-  font-size: 1rem;
+  font-size: 14px;
   margin-bottom: 1.5rem;
 }
 
 
 .buttons button {
+  font-size: 14px;
   margin: 0 0.5rem 0.5rem 0;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -114,6 +115,7 @@
 
 
 .form-content {
+  font-size: 14px;
   position: absolute;
   top: 50%;
   right: 5%;
@@ -132,16 +134,20 @@
 
 .form-content h4 {
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 18px;
 }
 
 .form-content input,
 .form-content select,
 .form-content button {
-  padding: 0.7rem;
+  padding: 0.5rem;
   border-radius: 5px;
   border: none;
-  font-size: 0.95rem;
+  font-size: 14px;
+}
+
+.tsts{
+  margin: 4px;
 }
 
 .form-content button {
