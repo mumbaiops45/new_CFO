@@ -33,51 +33,10 @@
 }
 
 
-.case-card-flip {
-  width: 100%;
-  max-width: 350px;
-  height: 450px; 
-  perspective: 1200px;
-}
-
-.case-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.7s ease-in-out;
-  transform-style: preserve-3d;
-}
-
 .case-card-flip:hover .case-card-inner {
   transform: rotateY(180deg);
 }
 
-
-.case-card-front,
-.case-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 18px;
-  backface-visibility: hidden;
-  overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-}
-
-
-.case-card-front {
-  background: #ffffff;
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.4s ease;
-}
-
-.case-card-front:hover {
-  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.12);
-  transform: translateY(-6px);
-}
 
 .case-badge {
   background: #16a34a;
@@ -97,12 +56,7 @@
   margin-bottom: 12px;
 }
 
-.case-card-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 12px;
-}
+
 
 .case-description {
   font-size: 14px;
@@ -126,12 +80,6 @@
   color: #334155;
 }
 
-
-.case-card-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
 
 .case-link,
 .case-btn {
@@ -164,19 +112,154 @@
 }
 
 
-.case-card-back {
-  transform: rotateY(180deg);
+.case-card {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+  position: relative;
 }
 
-.case-card-back img {
+.case-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(22, 163, 74, 0.15);
+}
+
+
+.case-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;
+  background: linear-gradient(135deg, #16a34a, #22c55e, #15803d);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.case-card:hover::before {
+  opacity: 1;
+}
+
+/* Image Section */
+.case-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.case-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s ease;
 }
 
+.case-card:hover .case-image img {
+  transform: scale(1.1);
+}
 
-@media (max-width: 768px) {
-  .case-card-flip {
-    height: 420px;
-  }
+/* Dark overlay animation */
+.case-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.case-card:hover .case-image::after {
+  opacity: 1;
+}
+
+/* Content */
+.case-content {
+  padding: 24px;
+}
+
+.case-badge {
+  background: #16a34a;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.case-type {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.case-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.case-description {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.case-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.case-point {
+  background: #f1f5f9;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+.case-card-footer {
+  display: flex;
+  gap: 10px;
+}
+
+.case-link,
+.case-btn {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.case-link {
+  background: #16a34a;
+  color: white;
+}
+
+.case-link:hover {
+  background: #15803d;
+}
+
+.case-btn {
+  background: #1e293b;
+  color: white;
+}
+
+.case-btn:hover {
+  background: #0f172a;
 }

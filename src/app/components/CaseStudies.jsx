@@ -7,7 +7,6 @@ import Link from "next/link";
 import "../styles/case.modal.css";
 
 
-
 const caseStudies = [
   {
     category: "Virtual CFO",
@@ -57,35 +56,63 @@ const CaseStudies = () => {
       <div className="case-grid">
         {caseStudies.map((item, index) => (
 
-          <div key={index} className="case-card-flip">
-            <div className="case-card-inner">
+          // <div key={index} className="case-card-flip">
+          //   <div className="case-card-inner">
 
-              <div className="case-card-front">
-                <div className="case-badge">{item.category}</div>
-                <div className="case-type">{item.type}</div>
-                <h3 className="case-card-title">{item.title}</h3>
-                <p className="case-description">{item.description}</p>
-                <div className="case-points">
-                  {item.points.map((point, i) => (
-                    <div key={i} className="case-point">{point}</div>
-                  ))}
-                </div>
-                <div className="case-card-footer">
-                  <Link href="#" className="case-link btn btn-success text-white">
-                    Read Full Story 
-                  </Link>
-                  <Link href="#" className="case-btn btn btn-primary">
-                    Talk to Expert
-                  </Link>
-                </div>
-              </div>
+          //     <div className="case-card-front">
+          //       <div className="case-badge">{item.category}</div>
+          //       <div className="case-type">{item.type}</div>
+          //       <h3 className="case-card-title">{item.title}</h3>
+          //       <p className="case-description">{item.description}</p>
+          //       <div className="case-points">
+          //         {item.points.map((point, i) => (
+          //           <div key={i} className="case-point">{point}</div>
+          //         ))}
+          //       </div>
+          //       <div className="case-card-footer">
+          //         <Link href="#" className="case-link btn btn-success text-white">
+          //           Read Full Story 
+          //         </Link>
+          //         <Link href="#" className="case-btn btn btn-primary">
+          //           Talk to Expert
+          //         </Link>
+          //       </div>
+          //     </div>
 
 
-              <div className="case-card-back">
-                <img src={item.image} alt={item.title} />
-              </div>
-            </div>
-          </div>
+          //     <div className="case-card-back">
+          //       <img src={item.image} alt={item.title} />
+          //     </div>
+          //   </div>
+          // </div>
+
+          <div key={index} className="case-card">
+  <div className="case-image">
+    <img src={item.image} alt={item.title} />
+  </div>
+
+  <div className="case-content">
+    <div className="case-badge">{item.category}</div>
+    <div className="case-type">{item.type}</div>
+    <h3 className="case-card-title">{item.title}</h3>
+    <p className="case-description">{item.description}</p>
+
+    <div className="case-points">
+      {item.points.map((point, i) => (
+        <div key={i} className="case-point">{point}</div>
+      ))}
+    </div>
+
+    <div className="case-card-footer">
+      <Link href="#" className="case-link">
+        Read Full Story
+      </Link>
+      <Link href="#" className="case-btn">
+        Talk to Expert
+      </Link>
+    </div>
+  </div>
+</div>
         ))}
       </div>
     </section>

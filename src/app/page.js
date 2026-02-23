@@ -20,9 +20,7 @@ export default function Home() {
       </section>
 
       <Cclients />
-      <section id="about">
         <About />
-      </section>
 
       <Feature />
       <Body />

@@ -7,9 +7,6 @@
 
   background:
     linear-gradient(135deg, #f8fbff, #eef4ff);
-
-  /* font-family: 'Poppins', sans-serif; */
-
 }
 
 
@@ -177,7 +174,7 @@
 .faq-cta-btn {
     font-size: 14px;
   margin-top: 15px;
-  background: #4f46e5;
+  background: #5EA349;
   color: white;
   border: none;
   padding: 10px 18px;
