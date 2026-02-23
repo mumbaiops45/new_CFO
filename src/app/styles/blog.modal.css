@@ -109,7 +109,6 @@
   line-height: 1.4;
 }
 
-/* BUTTON */
 .cfo-blog-btn {
   background: none;
   border: none;
@@ -125,7 +124,7 @@
   letter-spacing: 1px;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 992px) {
   .cfo-blog-grid {
     grid-template-columns: 1fr;
