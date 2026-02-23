@@ -63,9 +63,6 @@ export default function Workprocess() {
                 {step.desc}
               </p>
 
-              <div className="cfo-workflow-number">
-                0{index + 1}
-              </div>
 
             </div>
           ))}
