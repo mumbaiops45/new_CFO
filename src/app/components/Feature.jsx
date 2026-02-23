@@ -61,7 +61,6 @@ const Feature = () => {
               >
                 <FeatureCard {...card} showExtra={hoveredIndex === index} />
                 
-                {/* Button shown only on hover */}
                 {hoveredIndex === index && (
                   <button className="hover-btn">Get Started</button>
                 )}

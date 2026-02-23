@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 
 export default function Workprocess() {
-
+  
   const steps = [
     {
       icon: <FaSearch />,
@@ -62,8 +62,6 @@ export default function Workprocess() {
               <p className="cfo-workflow-card-desc">
                 {step.desc}
               </p>
-
-
             </div>
           ))}
         </div>

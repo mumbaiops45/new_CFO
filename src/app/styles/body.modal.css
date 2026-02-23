@@ -1,9 +1,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-body{
+/* body{
   font-family: 'Poppins', sans-serif;
-}
+} */
 
 .hero-wrapper{
   background: linear-gradient(135deg,#f8fbff,#eef4ff);
@@ -29,7 +29,6 @@ body{
 }
 
 
-/* badge */
 
 .hero-badge{
   background:#e0e7ff;
@@ -82,9 +81,7 @@ font-size: 14px;
   display:flex;
   gap:12px;
   align-items:center;
-
   box-shadow:0 10px 25px rgba(0,0,0,.05);
-
   transition:.3s;
 }
 
@@ -103,7 +100,6 @@ font-size: 14px;
 }
 
 
-/* IMAGE */
 
 .hero-image-box{
 
@@ -123,7 +119,6 @@ font-size: 14px;
 }
 
 
-/* floating card */
 
 .floating-card{
 

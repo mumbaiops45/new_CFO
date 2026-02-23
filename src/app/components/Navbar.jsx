@@ -51,6 +51,7 @@ const MyNavbar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto  align-items-lg-center">
             <Nav.Link onClick={handleHomeClick} >Home</Nav.Link>
+             <Nav.Link onClick={handleScrollLink("about")}>About</Nav.Link>
             <Nav.Link onClick={handleScrollLink("voice")}>Voice of Customer</Nav.Link>
             <Nav.Link onClick={handleScrollLink("event")}>Recent Updates</Nav.Link>
             <Nav.Link onClick={handleScrollLink("task")}>FAQ</Nav.Link>

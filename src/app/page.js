@@ -10,6 +10,7 @@ import CaseStudies from "./components/CaseStudies";
 import ClientFeedback from "./components/ClientFeedback";
 import RecentBlog from "./components/RecentBlog";
 import Cclients from "./components/Cclients";
+import About from "./components/About";
 
 export default function Home() {
   return (
@@ -19,6 +20,10 @@ export default function Home() {
       </section>
 
       <Cclients />
+      <section id="about">
+        <About />
+      </section>
+
       <Feature />
       <Body />
       <Workprocess />
